@@ -1,0 +1,1379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GAJANAN VADA PAV | Street Food in Neemuch</title>
+  <meta name="description" content="GAJANAN VADA PAV serves delicious Indian street food including Vada Pav, sandwiches, pizza, and burgers at Lions Park, Neemuch, Madhya Pradesh. Hot, fresh & full of flavour." />
+  <meta name="keywords" content="Vada Pav in Neemuch, Street Food in Neemuch, Burgers in Neemuch, Sandwiches in Neemuch, GAJANAN VADA PAV, Lions Park Neemuch" />
+  
+  <!-- LocalBusiness Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "GAJANAN VADA PAV",
+    "description": "Delicious Indian street food made fresh and served hot at Lions Park, Neemuch.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Lions Park",
+      "addressLocality": "Neemuch",
+      "addressRegion": "Madhya Pradesh",
+      "addressCountry": "IN"
+    },
+    "url": "https://maps.app.goo.gl/66VZw2Hnrnd38LcD8",
+    "servesCuisine": ["Indian Street Food", "Vada Pav", "Sandwiches", "Pizza", "Burgers"],
+    "priceRange": "₹"
+  }
+  </script>
+
+  <style>
+    /* ===== CSS VARIABLES & RESET ===== */
+    :root {
+      --primary: #D9381E;
+      --primary-dark: #B52D16;
+      --secondary: #FF9F1C;
+      --accent: #F4D03F;
+      --bg: #FFF8F0;
+      --bg-warm: #FFECD2;
+      --text: #2C1810;
+      --text-light: #6B4F4B;
+      --white: #FFFFFF;
+      --shadow: 0 4px 20px rgba(44, 24, 16, 0.08);
+      --shadow-lg: 0 10px 40px rgba(44, 24, 16, 0.12);
+      --radius: 16px;
+      --radius-sm: 10px;
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+    button { border: none; background: none; cursor: pointer; font-family: inherit; }
+
+    /* ===== ANIMATIONS ===== */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+    @keyframes shimmer {
+      0% { background-position: -200% 0; }
+      100% { background-position: 200% 0; }
+    }
+
+    .animate-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .animate-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ===== NAVIGATION ===== */
+    .navbar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      background: rgba(255, 248, 240, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(217, 56, 30, 0.1);
+      transition: var(--transition);
+    }
+    .navbar.scrolled {
+      box-shadow: var(--shadow);
+    }
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+    .logo {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .logo-icon {
+      width: 36px; height: 36px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.1rem;
+    }
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      align-items: center;
+    }
+    .nav-links a {
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--text);
+      transition: var(--transition);
+      position: relative;
+    }
+    .nav-links a:hover { color: var(--primary); }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px; left: 0;
+      width: 0; height: 2px;
+      background: var(--primary);
+      transition: var(--transition);
+    }
+    .nav-links a:hover::after { width: 100%; }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 28px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      transition: var(--transition);
+      cursor: pointer;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: white;
+      box-shadow: 0 4px 15px rgba(217, 56, 30, 0.3);
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(217, 56, 30, 0.4);
+    }
+    .btn-secondary {
+      background: white;
+      color: var(--primary);
+      border: 2px solid var(--primary);
+    }
+    .btn-secondary:hover {
+      background: var(--primary);
+      color: white;
+    }
+    .btn-small { padding: 8px 20px; font-size: 0.85rem; }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      padding: 8px;
+      z-index: 1001;
+    }
+    .hamburger span {
+      display: block;
+      width: 24px; height: 2.5px;
+      background: var(--text);
+      border-radius: 2px;
+      transition: var(--transition);
+    }
+    .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+    .hamburger.active span:nth-child(2) { opacity: 0; }
+    .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+    .mobile-nav {
+      position: fixed;
+      inset: 0;
+      background: rgba(255, 248, 240, 0.98);
+      backdrop-filter: blur(20px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 32px;
+      z-index: 999;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+    .mobile-nav.active { opacity: 1; pointer-events: all; }
+    .mobile-nav a {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+    .mobile-nav .btn { margin-top: 16px; }
+
+    /* ===== HERO ===== */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 100px 20px 60px;
+      background: linear-gradient(135deg, var(--bg) 0%, var(--bg-warm) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%; right: -20%;
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(255, 159, 28, 0.15) 0%, transparent 70%);
+      border-radius: 50%;
+      animation: float 6s ease-in-out infinite;
+    }
+    .hero-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      width: 100%;
+    }
+    .hero-content { animation: fadeInUp 0.8s ease; }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(217, 56, 30, 0.1);
+      color: var(--primary);
+      padding: 8px 16px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 0.85rem;
+      margin-bottom: 20px;
+    }
+    .hero h1 {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 900;
+      line-height: 1.1;
+      margin-bottom: 20px;
+      color: var(--text);
+    }
+    .hero h1 span {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero p {
+      font-size: 1.15rem;
+      color: var(--text-light);
+      margin-bottom: 32px;
+      max-width: 480px;
+    }
+    .hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; }
+
+    .hero-visual {
+      position: relative;
+      animation: fadeInUp 0.8s ease 0.2s both;
+    }
+    .hero-image-container {
+      position: relative;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      transform: perspective(1000px) rotateY(-5deg);
+      transition: var(--transition);
+    }
+    .hero-image-container:hover {
+      transform: perspective(1000px) rotateY(0deg);
+    }
+    .hero-image {
+      width: 100%;
+      height: 450px;
+      object-fit: cover;
+      background: linear-gradient(135deg, #FF6B35, #F7931E);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 5rem;
+      position: relative;
+    }
+    .hero-image::after {
+      content: '🍔';
+      position: absolute;
+      font-size: 8rem;
+      opacity: 0.3;
+      animation: float 4s ease-in-out infinite;
+    }
+    .price-tag {
+      position: absolute;
+      bottom: -20px; left: -20px;
+      background: var(--primary);
+      color: white;
+      padding: 16px 24px;
+      border-radius: var(--radius);
+      font-weight: 800;
+      font-size: 1.2rem;
+      box-shadow: var(--shadow);
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    /* ===== SECTIONS COMMON ===== */
+    section { padding: 80px 20px; }
+    .section-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .section-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+    .section-header h2 {
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+    .section-header p {
+      color: var(--text-light);
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* ===== POPULAR ITEMS ===== */
+    .popular-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+    .food-card {
+      background: white;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+      position: relative;
+    }
+    .food-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-lg);
+    }
+    .food-card-image {
+      height: 200px;
+      background: linear-gradient(135deg, var(--bg-warm), #FFE5B4);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 4rem;
+    }
+    .food-card:hover .food-card-image {
+      transform: scale(1.05);
+    }
+    .food-card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: var(--transition);
+    }
+    .food-badge {
+      position: absolute;
+      top: 12px; left: 12px;
+      padding: 6px 12px;
+      border-radius: 50px;
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .badge-popular { background: var(--primary); color: white; }
+    .badge-bestseller { background: var(--secondary); color: white; }
+    .badge-musttry { background: var(--accent); color: var(--text); }
+    .badge-new { background: #2ECC71; color: white; }
+
+    .food-card-content { padding: 20px; }
+    .food-card-content h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .food-card-content p {
+      color: var(--text-light);
+      font-size: 0.9rem;
+      margin-bottom: 12px;
+      line-height: 1.5;
+    }
+    .food-card-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .price {
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: var(--primary);
+    }
+    .availability {
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 50px;
+    }
+    .available { background: #E8F5E9; color: #2E7D32; }
+    .unavailable { background: #FFEBEE; color: #C62828; }
+
+    /* ===== MENU SECTION ===== */
+    .menu-section { background: white; }
+    .category-filter {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+    .category-btn {
+      padding: 10px 24px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      background: var(--bg);
+      color: var(--text);
+      transition: var(--transition);
+      border: 2px solid transparent;
+    }
+    .category-btn:hover { border-color: var(--primary); color: var(--primary); }
+    .category-btn.active {
+      background: var(--primary);
+      color: white;
+      box-shadow: 0 4px 15px rgba(217, 56, 30, 0.3);
+    }
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 24px;
+    }
+    .menu-item {
+      display: flex;
+      gap: 16px;
+      background: var(--bg);
+      padding: 16px;
+      border-radius: var(--radius-sm);
+      transition: var(--transition);
+      align-items: center;
+    }
+    .menu-item:hover {
+      background: white;
+      box-shadow: var(--shadow);
+      transform: translateX(4px);
+    }
+    .menu-item-image {
+      width: 80px; height: 80px;
+      border-radius: var(--radius-sm);
+      background: linear-gradient(135deg, var(--bg-warm), #FFE5B4);
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      overflow: hidden;
+    }
+    .menu-item-image img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+    }
+    .menu-item-info { flex: 1; }
+    .menu-item-info h4 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+    .menu-item-info p {
+      font-size: 0.85rem;
+      color: var(--text-light);
+      margin-bottom: 8px;
+    }
+    .menu-item-price {
+      font-weight: 800;
+      color: var(--primary);
+      font-size: 1.1rem;
+    }
+
+    /* ===== WHY CHOOSE US ===== */
+    .why-section { background: linear-gradient(135deg, var(--bg-warm), var(--bg)); }
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 24px;
+    }
+    .feature-card {
+      background: white;
+      padding: 32px;
+      border-radius: var(--radius);
+      text-align: center;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+    }
+    .feature-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+    .feature-icon {
+      width: 64px; height: 64px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      font-size: 1.8rem;
+      color: white;
+    }
+    .feature-card h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .feature-card p {
+      color: var(--text-light);
+      font-size: 0.95rem;
+    }
+
+    /* ===== ABOUT ===== */
+    .about-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+    .about-image {
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      height: 400px;
+      background: linear-gradient(135deg, #FF6B35, #F7931E);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 6rem;
+      position: relative;
+    }
+    .about-image::after {
+      content: '🇮🇳';
+      position: absolute;
+      font-size: 8rem;
+      opacity: 0.2;
+    }
+    .about-content h2 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+    .about-content p {
+      color: var(--text-light);
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin-bottom: 24px;
+    }
+
+    /* ===== LOCATION ===== */
+    .location-section { background: white; }
+    .location-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+    .location-info h2 { margin-bottom: 16px; }
+    .location-info .address {
+      font-size: 1.2rem;
+      color: var(--text-light);
+      margin-bottom: 24px;
+      display: flex;
+      align-items: start;
+      gap: 12px;
+    }
+    .location-info .address-icon {
+      font-size: 1.5rem;
+      color: var(--primary);
+    }
+    .map-container {
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      height: 350px;
+      background: var(--bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    .map-placeholder {
+      text-align: center;
+      color: var(--text-light);
+    }
+    .map-placeholder-icon {
+      font-size: 4rem;
+      margin-bottom: 12px;
+    }
+
+    /* ===== CONTACT ===== */
+    .contact-section { background: linear-gradient(135deg, var(--bg), var(--bg-warm)); }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 24px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .contact-card {
+      background: white;
+      padding: 28px;
+      border-radius: var(--radius);
+      text-align: center;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+    }
+    .contact-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+    .contact-icon {
+      width: 56px; height: 56px;
+      background: var(--bg);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+      font-size: 1.5rem;
+      color: var(--primary);
+    }
+    .contact-card h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .contact-card p, .contact-card a {
+      color: var(--text-light);
+      font-size: 0.95rem;
+      word-break: break-all;
+    }
+    .contact-card a:hover { color: var(--primary); }
+    .hidden { display: none !important; }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      background: var(--text);
+      color: white;
+      padding: 60px 20px 30px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 40px;
+      max-width: 1200px;
+      margin: 0 auto 40px;
+    }
+    .footer-brand .logo {
+      color: white;
+      margin-bottom: 16px;
+      font-size: 1.5rem;
+    }
+    .footer-brand p {
+      color: rgba(255,255,255,0.7);
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+    .footer-col h4 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: var(--secondary);
+    }
+    .footer-col ul { list-style: none; }
+    .footer-col li { margin-bottom: 12px; }
+    .footer-col a {
+      color: rgba(255,255,255,0.7);
+      transition: var(--transition);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .footer-col a:hover { color: var(--secondary); transform: translateX(4px); }
+    .social-links {
+      display: flex;
+      gap: 12px;
+      margin-top: 16px;
+    }
+    .social-links a {
+      width: 40px; height: 40px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition);
+    }
+    .social-links a:hover {
+      background: var(--primary);
+      transform: translateY(-3px);
+    }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 24px;
+      text-align: center;
+      color: rgba(255,255,255,0.5);
+      font-size: 0.9rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* ===== FLOATING CTA ===== */
+    .floating-cta {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 998;
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: white;
+      padding: 16px 24px;
+      border-radius: 50px;
+      font-weight: 700;
+      box-shadow: 0 4px 20px rgba(217, 56, 30, 0.4);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      animation: fadeInUp 0.5s ease;
+      transition: var(--transition);
+    }
+    .floating-cta:hover {
+      transform: translateY(-4px) scale(1.05);
+      box-shadow: 0 8px 30px rgba(217, 56, 30, 0.5);
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .hero-container { grid-template-columns: 1fr; text-align: center; }
+      .hero p { margin: 0 auto 32px; }
+      .hero-buttons { justify-content: center; }
+      .hero-image { height: 300px; }
+      .price-tag { left: 50%; transform: translateX(-50%); }
+      .about-container, .location-container { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      section { padding: 60px 20px; }
+      .floating-cta { bottom: 16px; right: 16px; padding: 12px 20px; font-size: 0.9rem; }
+    }
+    @media (max-width: 480px) {
+      .footer-grid { grid-template-columns: 1fr; }
+      .category-filter { gap: 8px; }
+      .category-btn { padding: 8px 16px; font-size: 0.85rem; }
+      .menu-item { flex-direction: column; text-align: center; }
+      .menu-item-image { width: 100%; height: 160px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo" id="navLogo">
+        <div class="logo-icon">🍔</div>
+        <span id="navShopName">GAJANAN VADA PAV</span>
+      </a>
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#about">About</a>
+        <a href="#location">Location</a>
+        <a href="#contact">Contact</a>
+        <a href="#menu" class="btn btn-primary btn-small">View Menu</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#home" onclick="closeMobileNav()">Home</a>
+    <a href="#menu" onclick="closeMobileNav()">Menu</a>
+    <a href="#about" onclick="closeMobileNav()">About</a>
+    <a href="#location" onclick="closeMobileNav()">Location</a>
+    <a href="#contact" onclick="closeMobileNav()">Contact</a>
+    <a href="#menu" class="btn btn-primary" onclick="closeMobileNav()">View Menu</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-badge">🔥 Fresh from the pan</div>
+        <h1 id="heroHeadline">Hot. Fresh. <span>Full of Flavour.</span></h1>
+        <p id="heroDescription">Delicious, freshly prepared street food served hot at Lions Park, Neemuch. From crispy Vada Pav to cheesy Pizza — your local stop for bold Indian flavours.</p>
+        <div class="hero-buttons">
+          <a href="#menu" class="btn btn-primary">View Menu</a>
+          <a href="#" class="btn btn-secondary" id="findUsBtn">Find Us</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-image-container">
+          <div class="hero-image" id="heroImage">🍔</div>
+          <div class="price-tag" id="heroPriceTag">From ₹40</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- POPULAR ITEMS -->
+  <section id="popular">
+    <div class="section-container">
+      <div class="section-header animate-in">
+        <h2>Customer Favourites</h2>
+        <p>Most loved items by our regulars. Try what Neemuch is raving about!</p>
+      </div>
+      <div class="popular-grid" id="popularGrid"></div>
+    </div>
+  </section>
+
+  <!-- MENU -->
+  <section class="menu-section" id="menu">
+    <div class="section-container">
+      <div class="section-header animate-in">
+        <h2>Our Menu</h2>
+        <p>Explore our full range of hot, fresh street food</p>
+      </div>
+      <div class="category-filter" id="categoryFilter"></div>
+      <div class="menu-grid" id="menuGrid"></div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section class="why-section" id="why">
+    <div class="section-container">
+      <div class="section-header animate-in">
+        <h2>Why Choose Us?</h2>
+        <p>What makes GAJANAN VADA PAV the favourite street-food spot in Neemuch</p>
+      </div>
+      <div class="features-grid" id="featuresGrid"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="section-container about-container">
+      <div class="about-image animate-in">🍳</div>
+      <div class="about-content animate-in">
+        <h2 id="aboutTitle">About GAJANAN VADA PAV</h2>
+        <p id="aboutText">Your local stop for delicious, freshly prepared street food in Neemuch. We believe great food doesn't need a fancy address — just fresh ingredients, bold spices, and a lot of love. Every Vada Pav, every sandwich, every burger is made to order, served hot, and priced right. Come hungry, leave happy.</p>
+        <a href="#menu" class="btn btn-primary">Explore Menu</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCATION -->
+  <section class="location-section" id="location">
+    <div class="section-container location-container">
+      <div class="location-info animate-in">
+        <h2>Visit Us</h2>
+        <div class="address">
+          <span class="address-icon">📍</span>
+          <span id="locationAddress">Lions Park, Neemuch, Madhya Pradesh, India</span>
+        </div>
+        <p style="color: var(--text-light); margin-bottom: 24px;">Find us at Lions Park — easy to spot, hard to resist. Come by for a quick bite or grab your favourites to go.</p>
+        <a href="#" class="btn btn-primary" id="directionsBtn">Get Directions</a>
+      </div>
+      <div class="map-container animate-in">
+        <div class="map-placeholder">
+          <div class="map-placeholder-icon">🗺️</div>
+          <p>Interactive Map</p>
+          <a href="#" id="mapLink" style="color: var(--primary); font-weight: 700; margin-top: 8px; display: inline-block;">Open in Google Maps →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact-section" id="contact">
+    <div class="section-container">
+      <div class="section-header animate-in">
+        <h2>Contact & Hours</h2>
+        <p>Reach out or stop by during our opening hours</p>
+      </div>
+      <div class="contact-grid" id="contactGrid"></div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo">
+          <div class="logo-icon">🍔</div>
+          <span id="footerShopName">GAJANAN VADA PAV</span>
+        </div>
+        <p id="footerDescription">Hot, fresh & full of flavour. Your local street-food destination in Neemuch.</p>
+        <div class="social-links" id="footerSocial"></div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#location">Location</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Menu</h4>
+        <ul id="footerMenu"></ul>
+      </div>
+      <div class="footer-col">
+        <h4>Visit</h4>
+        <ul>
+          <li><a href="#" id="footerAddress">Lions Park, Neemuch</a></li>
+          <li><a href="#" id="footerDirections">Get Directions</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p id="footerCopyright">© 2024 GAJANAN VADA PAV. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- FLOATING CTA -->
+  <a href="#menu" class="floating-cta" id="floatingCta">🍔 View Menu</a>
+
+  <!-- JAVASCRIPT -->
+  <script>
+    // ==========================================
+    // CENTRALIZED CONFIGURATION
+    // ==========================================
+    const businessConfig = {
+      shopName: "GAJANAN VADA PAV",
+      tagline: "Hot, Fresh & Full of Flavour",
+      description: "Delicious Indian street food made fresh and served hot.",
+      address: "Lions Park, Neemuch, Madhya Pradesh, India",
+      googleMapsUrl: "https://maps.app.goo.gl/66VZw2Hnrnd38LcD8",
+      phone: "",
+      whatsappNumber: "",
+      openingHours: {
+        monday: "",
+        tuesday: "",
+        wednesday: "",
+        thursday: "",
+        friday: "",
+        saturday: "",
+        sunday: ""
+      },
+      socialLinks: {
+        instagram: "",
+        facebook: ""
+      },
+      menuCategories: ["Vada Pav", "Sandwiches", "Pizza", "Burgers", "More"]
+    };
+
+    const menuData = [
+      {
+        name: "Classic Vada Pav",
+        description: "Freshly prepared vada pav with green chutney and fried green chilli.",
+        price: "₹40",
+        image: "",
+        category: "Vada Pav",
+        popular: true,
+        available: true,
+        badge: "Popular"
+      },
+      {
+        name: "Cheese Vada Pav",
+        description: "Classic vada pav loaded with melted cheese and special masala.",
+        price: "₹60",
+        image: "",
+        category: "Vada Pav",
+        popular: true,
+        available: true,
+        badge: "Best Seller"
+      },
+      {
+        name: "Grilled Sandwich",
+        description: "Fresh veggies, cheese, and chutney grilled to perfection.",
+        price: "₹80",
+        image: "",
+        category: "Sandwiches",
+        popular: true,
+        available: true,
+        badge: "Must Try"
+      },
+      {
+        name: "Veg Pizza",
+        description: "Crispy base with tangy sauce, veggies, and loads of cheese.",
+        price: "₹120",
+        image: "",
+        category: "Pizza",
+        popular: false,
+        available: true,
+        badge: ""
+      },
+      {
+        name: "Paneer Burger",
+        description: "Juicy paneer patty with fresh veggies and creamy mayo.",
+        price: "₹100",
+        image: "",
+        category: "Burgers",
+        popular: true,
+        available: true,
+        badge: "Popular"
+      },
+      {
+        name: "Schezwan Noodles",
+        description: "Spicy schezwan noodles with crunchy veggies.",
+        price: "₹90",
+        image: "",
+        category: "More",
+        popular: false,
+        available: true,
+        badge: "New"
+      },
+      {
+        name: "Masala Dosa",
+        description: "Crispy dosa stuffed with spiced potato filling.",
+        price: "₹110",
+        image: "",
+        category: "More",
+        popular: false,
+        available: true,
+        badge: ""
+      },
+      {
+        name: "Chocolate Sandwich",
+        description: "Sweet chocolate spread grilled between soft bread slices.",
+        price: "₹70",
+        image: "",
+        category: "Sandwiches",
+        popular: false,
+        available: true,
+        badge: ""
+      }
+    ];
+
+    const features = [
+      { icon: "🔥", title: "Freshly Prepared", description: "Every item is made to order with fresh ingredients." },
+      { icon: "😋", title: "Hot & Delicious", description: "Served straight from the pan to your hands." },
+      { icon: "🇮🇳", title: "Authentic Street Food", description: "Real Indian flavours, local Neemuch style." },
+      { icon: "⚡", title: "Quick Service", description: "No long waits. Grab and go in minutes." },
+      { icon: "💰", title: "Great Value", description: "Big taste, small price. Street food done right." },
+      { icon: "❤️", title: "Made for Food Lovers", description: "Crafted with passion for true foodies." }
+    ];
+
+    // ==========================================
+    // UTILITY FUNCTIONS
+    // ==========================================
+    function isEmpty(value) {
+      if (value === null || value === undefined) return true;
+      if (typeof value === 'string') return value.trim() === '';
+      if (typeof value === 'object') return Object.keys(value).length === 0;
+      return false;
+    }
+
+    function hasAnyOpeningHours() {
+      return Object.values(businessConfig.openingHours).some(h => !isEmpty(h));
+    }
+
+    function hasAnySocialLinks() {
+      return Object.values(businessConfig.socialLinks).some(l => !isEmpty(l));
+    }
+
+    function getEmojiForCategory(category) {
+      const map = {
+        "Vada Pav": "🍔",
+        "Sandwiches": "🥪",
+        "Pizza": "🍕",
+        "Burgers": "🍔",
+        "More": "🍜"
+      };
+      return map[category] || "🍽️";
+    }
+
+    // ==========================================
+    // RENDER FUNCTIONS
+    // ==========================================
+    function renderNavbar() {
+      document.getElementById('navShopName').textContent = businessConfig.shopName;
+    }
+
+    function renderHero() {
+      document.getElementById('heroHeadline').innerHTML = 
+        `Hot. Fresh. <span>${businessConfig.tagline.replace(/^Hot, Fresh & /, '') || 'Full of Flavour.'}</span>`;
+      document.getElementById('heroDescription').textContent = 
+        `Delicious, freshly prepared street food served hot at ${businessConfig.address.split(',')[0]}, ${businessConfig.address.split(',')[1]}. From crispy Vada Pav to cheesy Pizza — your local stop for bold Indian flavours.`;
+      document.getElementById('findUsBtn').href = businessConfig.googleMapsUrl;
+    }
+
+    function renderPopularItems() {
+      const popular = menuData.filter(item => item.popular);
+      const grid = document.getElementById('popularGrid');
+      
+      if (popular.length === 0) {
+        grid.innerHTML = '<p style="text-align:center;color:var(--text-light);grid-column:1/-1;">Popular items coming soon!</p>';
+        return;
+      }
+
+      grid.innerHTML = popular.map(item => `
+        <div class="food-card animate-in">
+          <div class="food-card-image">
+            ${item.image ? `<img src="${item.image}" alt="${item.name}" loading="lazy">` : getEmojiForCategory(item.category)}
+            ${item.badge ? `<span class="food-badge badge-${item.badge.toLowerCase().replace(' ', '')}">${item.badge}</span>` : ''}
+          </div>
+          <div class="food-card-content">
+            <h3>${item.name}</h3>
+            <p>${item.description}</p>
+            <div class="food-card-footer">
+              <span class="price">${item.price}</span>
+              <span class="availability ${item.available ? 'available' : 'unavailable'}">
+                ${item.available ? '✓ Available' : '✗ Unavailable'}
+              </span>
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function renderCategoryFilter() {
+      const container = document.getElementById('categoryFilter');
+      const categories = ['All', ...businessConfig.menuCategories];
+      
+      container.innerHTML = categories.map(cat => `
+        <button class="category-btn ${cat === 'All' ? 'active' : ''}" 
+                onclick="filterMenu('${cat}')" 
+                data-category="${cat}">
+          ${cat}
+        </button>
+      `).join('');
+    }
+
+    function renderMenu(category = 'All') {
+      const grid = document.getElementById('menuGrid');
+      const items = category === 'All' ? menuData : menuData.filter(item => item.category === category);
+      
+      if (items.length === 0) {
+        grid.innerHTML = '<p style="text-align:center;color:var(--text-light);grid-column:1/-1;">No items in this category yet.</p>';
+        return;
+      }
+
+      grid.innerHTML = items.map(item => `
+        <div class="menu-item animate-in">
+          <div class="menu-item-image">
+            ${item.image ? `<img src="${item.image}" alt="${item.name}" loading="lazy">` : getEmojiForCategory(item.category)}
+          </div>
+          <div class="menu-item-info">
+            <h4>${item.name}</h4>
+            <p>${item.description}</p>
+            <span class="menu-item-price">${item.price}</span>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function filterMenu(category) {
+      document.querySelectorAll('.category-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.category === category);
+      });
+      renderMenu(category);
+      // Re-trigger animations for new items
+      setTimeout(initScrollAnimations, 50);
+    }
+
+    function renderWhyChooseUs() {
+      const grid = document.getElementById('featuresGrid');
+      grid.innerHTML = features.map(f => `
+        <div class="feature-card animate-in">
+          <div class="feature-icon">${f.icon}</div>
+          <h3>${f.title}</h3>
+          <p>${f.description}</p>
+        </div>
+      `).join('');
+    }
+
+    function renderAbout() {
+      document.getElementById('aboutTitle').textContent = `About ${businessConfig.shopName}`;
+    }
+
+    function renderLocation() {
+      document.getElementById('locationAddress').textContent = businessConfig.address;
+      document.getElementById('directionsBtn').href = businessConfig.googleMapsUrl;
+      document.getElementById('mapLink').href = businessConfig.googleMapsUrl;
+    }
+
+    function renderContact() {
+      const grid = document.getElementById('contactGrid');
+      const cards = [];
+
+      if (!isEmpty(businessConfig.phone)) {
+        cards.push({
+          icon: "📞", title: "Phone", content: `<a href="tel:${businessConfig.phone}">${businessConfig.phone}</a>`
+        });
+      }
+
+      if (!isEmpty(businessConfig.whatsappNumber)) {
+        cards.push({
+          icon: "💬", title: "WhatsApp", content: `<a href="https://wa.me/${businessConfig.whatsappNumber}" target="_blank">Chat on WhatsApp</a>`
+        });
+      }
+
+      if (hasAnyOpeningHours()) {
+        const hoursHtml = Object.entries(businessConfig.openingHours)
+          .filter(([_, val]) => !isEmpty(val))
+          .map(([day, hours]) => `<div style="margin-bottom:4px;"><strong>${day.charAt(0).toUpperCase() + day.slice(1)}:</strong> ${hours}</div>`)
+          .join('');
+        cards.push({ icon: "🕐", title: "Opening Hours", content: hoursHtml });
+      }
+
+      if (!isEmpty(businessConfig.socialLinks.instagram)) {
+        cards.push({
+          icon: "📸", title: "Instagram", content: `<a href="${businessConfig.socialLinks.instagram}" target="_blank">Follow Us</a>`
+        });
+      }
+
+      if (!isEmpty(businessConfig.socialLinks.facebook)) {
+        cards.push({
+          icon: "👍", title: "Facebook", content: `<a href="${businessConfig.socialLinks.facebook}" target="_blank">Follow Us</a>`
+        });
+      }
+
+      if (cards.length === 0) {
+        grid.innerHTML = '<p style="text-align:center;color:var(--text-light);grid-column:1/-1;">Contact details coming soon. Visit us at Lions Park!</p>';
+        return;
+      }
+
+      grid.innerHTML = cards.map(card => `
+        <div class="contact-card animate-in">
+          <div class="contact-icon">${card.icon}</div>
+          <h3>${card.title}</h3>
+          <div>${card.content}</div>
+        </div>
+      `).join('');
+    }
+
+    function renderFooter() {
+      document.getElementById('footerShopName').textContent = businessConfig.shopName;
+      document.getElementById('footerDescription').textContent = businessConfig.description;
+      document.getElementById('footerAddress').textContent = businessConfig.address;
+      document.getElementById('footerAddress').href = businessConfig.googleMapsUrl;
+      document.getElementById('footerDirections').href = businessConfig.googleMapsUrl;
+      document.getElementById('footerCopyright').textContent = `© ${new Date().getFullYear()} ${businessConfig.shopName}. All rights reserved.`;
+
+      const menuList = document.getElementById('footerMenu');
+      menuList.innerHTML = businessConfig.menuCategories.map(cat => 
+        `<li><a href="#menu" onclick="filterMenu('${cat}')">${cat}</a></li>`
+      ).join('');
+
+      const socialContainer = document.getElementById('footerSocial');
+      const socials = [];
+      if (!isEmpty(businessConfig.socialLinks.instagram)) {
+        socials.push({ href: businessConfig.socialLinks.instagram, icon: "📸", label: "Instagram" });
+      }
+      if (!isEmpty(businessConfig.socialLinks.facebook)) {
+        socials.push({ href: businessConfig.socialLinks.facebook, icon: "👍", label: "Facebook" });
+      }
+      
+      if (socials.length > 0) {
+        socialContainer.innerHTML = socials.map(s => 
+          `<a href="${s.href}" target="_blank" aria-label="${s.label}">${s.icon}</a>`
+        ).join('');
+      } else {
+        socialContainer.style.display = 'none';
+      }
+    }
+
+    // ==========================================
+    // INTERACTIONS
+    // ==========================================
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobileNav');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      mobileNav.classList.toggle('active');
+      document.body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : '';
+    });
+
+    function closeMobileNav() {
+      hamburger.classList.remove('active');
+      mobileNav.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    // Sticky navbar shadow
+    window.addEventListener('scroll', () => {
+      const navbar = document.getElementById('navbar');
+      navbar.classList.toggle('scrolled', window.scrollY > 10);
+    });
+
+    // Scroll animations
+    function initScrollAnimations() {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+      document.querySelectorAll('.animate-in').forEach(el => observer.observe(el));
+    }
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        if (href !== '#') {
+          e.preventDefault();
+          const target = document.querySelector(href);
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }
+      });
+    });
+
+    // ==========================================
+    // INITIALIZATION
+    // ==========================================
+    function init() {
+      renderNavbar();
+      renderHero();
+      renderPopularItems();
+      renderCategoryFilter();
+      renderMenu();
+      renderWhyChooseUs();
+      renderAbout();
+      renderLocation();
+      renderContact();
+      renderFooter();
+      initScrollAnimations();
+
+      // Update page title from config
+      document.title = `${businessConfig.shopName} | Street Food in Neemuch`;
+    }
+
+    init();
+  </script>
+</body>
+</html>
