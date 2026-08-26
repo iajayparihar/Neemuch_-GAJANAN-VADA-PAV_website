@@ -4,16 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>GAJANAN VADA PAV | Street Food in Neemuch</title>
-  <meta name="description" content="GAJANAN VADA PAV serves delicious Indian street food including Vada Pav, sandwiches, pizza, and burgers at Lions Park, Neemuch, Madhya Pradesh. Hot, fresh & full of flavour." />
-  <meta name="keywords" content="Vada Pav in Neemuch, Street Food in Neemuch, Burgers in Neemuch, Sandwiches in Neemuch, GAJANAN VADA PAV, Lions Park Neemuch" />
-  
-  <!-- LocalBusiness Structured Data -->
+  <meta name="description" content="GAJANAN VADA PAV serves delicious Indian street food including Vada Pav, Dabeli, Sandwiches and more at Lions Park, Neemuch, Madhya Pradesh. Hot, fresh & full of flavour." />
+  <meta name="keywords" content="Vada Pav in Neemuch, Dabeli in Neemuch, Street Food in Neemuch, Sandwiches in Neemuch, GAJANAN VADA PAV, Lions Park Neemuch" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "GAJANAN VADA PAV",
     "description": "Delicious Indian street food made fresh and served hot at Lions Park, Neemuch.",
+    "telephone": ["+918815511700", "+919981706138"],
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Lions Park",
@@ -22,13 +21,11 @@
       "addressCountry": "IN"
     },
     "url": "https://maps.app.goo.gl/66VZw2Hnrnd38LcD8",
-    "servesCuisine": ["Indian Street Food", "Vada Pav", "Sandwiches", "Pizza", "Burgers"],
+    "servesCuisine": ["Indian Street Food", "Vada Pav", "Dabeli", "Sandwiches"],
     "priceRange": "₹"
   }
   </script>
-
   <style>
-    /* ===== CSS VARIABLES & RESET ===== */
     :root {
       --primary: #D9381E;
       --primary-dark: #B52D16;
@@ -45,7 +42,6 @@
       --radius-sm: 10px;
       --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
-
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; }
     body {
@@ -58,8 +54,6 @@
     img { max-width: 100%; display: block; }
     a { text-decoration: none; color: inherit; }
     button { border: none; background: none; cursor: pointer; font-family: inherit; }
-
-    /* ===== ANIMATIONS ===== */
     @keyframes fadeInUp {
       from { opacity: 0; transform: translateY(30px); }
       to { opacity: 1; transform: translateY(0); }
@@ -72,11 +66,6 @@
       0%, 100% { transform: scale(1); }
       50% { transform: scale(1.05); }
     }
-    @keyframes shimmer {
-      0% { background-position: -200% 0; }
-      100% { background-position: 200% 0; }
-    }
-
     .animate-in {
       opacity: 0;
       transform: translateY(30px);
@@ -86,8 +75,6 @@
       opacity: 1;
       transform: translateY(0);
     }
-
-    /* ===== NAVIGATION ===== */
     .navbar {
       position: fixed;
       top: 0; left: 0; right: 0;
@@ -97,9 +84,7 @@
       border-bottom: 1px solid rgba(217, 56, 30, 0.1);
       transition: var(--transition);
     }
-    .navbar.scrolled {
-      box-shadow: var(--shadow);
-    }
+    .navbar.scrolled { box-shadow: var(--shadow); }
     .nav-container {
       max-width: 1200px;
       margin: 0 auto;
@@ -149,7 +134,6 @@
       transition: var(--transition);
     }
     .nav-links a:hover::after { width: 100%; }
-
     .btn {
       display: inline-flex;
       align-items: center;
@@ -181,7 +165,6 @@
       color: white;
     }
     .btn-small { padding: 8px 20px; font-size: 0.85rem; }
-
     .hamburger {
       display: none;
       flex-direction: column;
@@ -199,7 +182,6 @@
     .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
     .hamburger.active span:nth-child(2) { opacity: 0; }
     .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
-
     .mobile-nav {
       position: fixed;
       inset: 0;
@@ -222,8 +204,6 @@
       color: var(--text);
     }
     .mobile-nav .btn { margin-top: 16px; }
-
-    /* ===== HERO ===== */
     .hero {
       min-height: 100vh;
       display: flex;
@@ -284,7 +264,6 @@
       max-width: 480px;
     }
     .hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; }
-
     .hero-visual {
       position: relative;
       animation: fadeInUp 0.8s ease 0.2s both;
@@ -331,8 +310,6 @@
       box-shadow: var(--shadow);
       animation: pulse 2s ease-in-out infinite;
     }
-
-    /* ===== SECTIONS COMMON ===== */
     section { padding: 80px 20px; }
     .section-container {
       max-width: 1200px;
@@ -353,8 +330,6 @@
       max-width: 600px;
       margin: 0 auto;
     }
-
-    /* ===== POPULAR ITEMS ===== */
     .popular-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -405,7 +380,6 @@
     .badge-bestseller { background: var(--secondary); color: white; }
     .badge-musttry { background: var(--accent); color: var(--text); }
     .badge-new { background: #2ECC71; color: white; }
-
     .food-card-content { padding: 20px; }
     .food-card-content h3 {
       font-size: 1.2rem;
@@ -436,8 +410,6 @@
     }
     .available { background: #E8F5E9; color: #2E7D32; }
     .unavailable { background: #FFEBEE; color: #C62828; }
-
-    /* ===== MENU SECTION ===== */
     .menu-section { background: white; }
     .category-filter {
       display: flex;
@@ -512,8 +484,6 @@
       color: var(--primary);
       font-size: 1.1rem;
     }
-
-    /* ===== WHY CHOOSE US ===== */
     .why-section { background: linear-gradient(135deg, var(--bg-warm), var(--bg)); }
     .features-grid {
       display: grid;
@@ -552,8 +522,6 @@
       color: var(--text-light);
       font-size: 0.95rem;
     }
-
-    /* ===== ABOUT ===== */
     .about-container {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -589,8 +557,6 @@
       line-height: 1.8;
       margin-bottom: 24px;
     }
-
-    /* ===== LOCATION ===== */
     .location-section { background: white; }
     .location-container {
       display: grid;
@@ -630,14 +596,12 @@
       font-size: 4rem;
       margin-bottom: 12px;
     }
-
-    /* ===== CONTACT ===== */
     .contact-section { background: linear-gradient(135deg, var(--bg), var(--bg-warm)); }
     .contact-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 24px;
-      max-width: 800px;
+      max-width: 900px;
       margin: 0 auto;
     }
     .contact-card {
@@ -675,8 +639,6 @@
     }
     .contact-card a:hover { color: var(--primary); }
     .hidden { display: none !important; }
-
-    /* ===== FOOTER ===== */
     .footer {
       background: var(--text);
       color: white;
@@ -742,8 +704,6 @@
       max-width: 1200px;
       margin: 0 auto;
     }
-
-    /* ===== FLOATING CTA ===== */
     .floating-cta {
       position: fixed;
       bottom: 24px;
@@ -765,8 +725,6 @@
       transform: translateY(-4px) scale(1.05);
       box-shadow: 0 8px 30px rgba(217, 56, 30, 0.5);
     }
-
-    /* ===== RESPONSIVE ===== */
     @media (max-width: 768px) {
       .nav-links { display: none; }
       .hamburger { display: flex; }
@@ -788,10 +746,9 @@
       .menu-item-image { width: 100%; height: 160px; }
     }
   </style>
+<base target="_blank">
 </head>
 <body>
-
-  <!-- NAVIGATION -->
   <nav class="navbar" id="navbar">
     <div class="nav-container">
       <a href="#" class="logo" id="navLogo">
@@ -811,7 +768,6 @@
       </button>
     </div>
   </nav>
-
   <div class="mobile-nav" id="mobileNav">
     <a href="#home" onclick="closeMobileNav()">Home</a>
     <a href="#menu" onclick="closeMobileNav()">Menu</a>
@@ -820,14 +776,12 @@
     <a href="#contact" onclick="closeMobileNav()">Contact</a>
     <a href="#menu" class="btn btn-primary" onclick="closeMobileNav()">View Menu</a>
   </div>
-
-  <!-- HERO -->
   <section class="hero" id="home">
     <div class="hero-container">
       <div class="hero-content">
         <div class="hero-badge">🔥 Fresh from the pan</div>
         <h1 id="heroHeadline">Hot. Fresh. <span>Full of Flavour.</span></h1>
-        <p id="heroDescription">Delicious, freshly prepared street food served hot at Lions Park, Neemuch. From crispy Vada Pav to cheesy Pizza — your local stop for bold Indian flavours.</p>
+        <p id="heroDescription">Delicious, freshly prepared street food served hot at Lions Park, Neemuch. From crispy Vada Pav to cheesy Sandwiches — your local stop for bold Indian flavours.</p>
         <div class="hero-buttons">
           <a href="#menu" class="btn btn-primary">View Menu</a>
           <a href="#" class="btn btn-secondary" id="findUsBtn">Find Us</a>
@@ -836,13 +790,11 @@
       <div class="hero-visual">
         <div class="hero-image-container">
           <div class="hero-image" id="heroImage">🍔</div>
-          <div class="price-tag" id="heroPriceTag">From ₹40</div>
+          <div class="price-tag" id="heroPriceTag">From ₹30</div>
         </div>
       </div>
     </div>
   </section>
-
-  <!-- POPULAR ITEMS -->
   <section id="popular">
     <div class="section-container">
       <div class="section-header animate-in">
@@ -852,8 +804,6 @@
       <div class="popular-grid" id="popularGrid"></div>
     </div>
   </section>
-
-  <!-- MENU -->
   <section class="menu-section" id="menu">
     <div class="section-container">
       <div class="section-header animate-in">
@@ -864,8 +814,6 @@
       <div class="menu-grid" id="menuGrid"></div>
     </div>
   </section>
-
-  <!-- WHY CHOOSE US -->
   <section class="why-section" id="why">
     <div class="section-container">
       <div class="section-header animate-in">
@@ -875,20 +823,16 @@
       <div class="features-grid" id="featuresGrid"></div>
     </div>
   </section>
-
-  <!-- ABOUT -->
   <section id="about">
     <div class="section-container about-container">
       <div class="about-image animate-in">🍳</div>
       <div class="about-content animate-in">
         <h2 id="aboutTitle">About GAJANAN VADA PAV</h2>
-        <p id="aboutText">Your local stop for delicious, freshly prepared street food in Neemuch. We believe great food doesn't need a fancy address — just fresh ingredients, bold spices, and a lot of love. Every Vada Pav, every sandwich, every burger is made to order, served hot, and priced right. Come hungry, leave happy.</p>
+        <p id="aboutText">Your local stop for delicious, freshly prepared street food in Neemuch. We believe great food does not need a fancy address — just fresh ingredients, bold spices, and a lot of love. Every Vada Pav, every Dabeli, every Sandwich is made to order, served hot, and priced right. Come hungry, leave happy.</p>
         <a href="#menu" class="btn btn-primary">Explore Menu</a>
       </div>
     </div>
   </section>
-
-  <!-- LOCATION -->
   <section class="location-section" id="location">
     <div class="section-container location-container">
       <div class="location-info animate-in">
@@ -909,8 +853,6 @@
       </div>
     </div>
   </section>
-
-  <!-- CONTACT -->
   <section class="contact-section" id="contact">
     <div class="section-container">
       <div class="section-header animate-in">
@@ -920,8 +862,6 @@
       <div class="contact-grid" id="contactGrid"></div>
     </div>
   </section>
-
-  <!-- FOOTER -->
   <footer class="footer">
     <div class="footer-grid">
       <div class="footer-brand">
@@ -957,23 +897,17 @@
       <p id="footerCopyright">© 2024 GAJANAN VADA PAV. All rights reserved.</p>
     </div>
   </footer>
-
-  <!-- FLOATING CTA -->
   <a href="#menu" class="floating-cta" id="floatingCta">🍔 View Menu</a>
-
-  <!-- JAVASCRIPT -->
   <script>
-    // ==========================================
-    // CENTRALIZED CONFIGURATION
-    // ==========================================
     const businessConfig = {
       shopName: "GAJANAN VADA PAV",
       tagline: "Hot, Fresh & Full of Flavour",
       description: "Delicious Indian street food made fresh and served hot.",
       address: "Lions Park, Neemuch, Madhya Pradesh, India",
       googleMapsUrl: "https://maps.app.goo.gl/66VZw2Hnrnd38LcD8",
-      phone: "",
-      whatsappNumber: "",
+      phone: "8815511700",
+      phoneSecondary: "9981706138",
+      whatsappNumber: "919981706138",
       openingHours: {
         monday: "",
         tuesday: "",
@@ -987,14 +921,14 @@
         instagram: "",
         facebook: ""
       },
-      menuCategories: ["Vada Pav", "Sandwiches", "Pizza", "Burgers", "More"]
+      menuCategories: ["Vada Pav", "Dabeli", "Sandwiches", "Pizza", "Burgers", "More"]
     };
 
     const menuData = [
       {
-        name: "Classic Vada Pav",
-        description: "Freshly prepared vada pav with green chutney and fried green chilli.",
-        price: "₹40",
+        name: "Vada Pav",
+        description: "Classic Mumbai-style vada pav with green chutney and fried green chilli.",
+        price: "₹30",
         image: "",
         category: "Vada Pav",
         popular: true,
@@ -1004,7 +938,7 @@
       {
         name: "Cheese Vada Pav",
         description: "Classic vada pav loaded with melted cheese and special masala.",
-        price: "₹60",
+        price: "₹40",
         image: "",
         category: "Vada Pav",
         popular: true,
@@ -1012,9 +946,69 @@
         badge: "Best Seller"
       },
       {
-        name: "Grilled Sandwich",
-        description: "Fresh veggies, cheese, and chutney grilled to perfection.",
-        price: "₹80",
+        name: "Special Vada Pav",
+        description: "Our signature vada pav with extra chutneys and toppings.",
+        price: "₹40",
+        image: "",
+        category: "Vada Pav",
+        popular: false,
+        available: true,
+        badge: ""
+      },
+      {
+        name: "Dabeli",
+        description: "Gujarati-style spicy potato filling in a soft bun with pomegranate and peanuts.",
+        price: "₹30",
+        image: "",
+        category: "Dabeli",
+        popular: true,
+        available: true,
+        badge: "Popular"
+      },
+      {
+        name: "Cheese Dabeli",
+        description: "Dabeli loaded with gooey melted cheese for extra indulgence.",
+        price: "₹40",
+        image: "",
+        category: "Dabeli",
+        popular: false,
+        available: true,
+        badge: ""
+      },
+      {
+        name: "Schezwan Dabeli",
+        description: "Spicy Schezwan dabeli with fiery Schezwan sauce, peanuts, and sev.",
+        price: "₹40",
+        image: "",
+        category: "Dabeli",
+        popular: false,
+        available: true,
+        badge: ""
+      },
+      {
+        name: "Aloo Sandwich",
+        description: "Spiced potato filling grilled between fresh bread slices.",
+        price: "₹50",
+        image: "",
+        category: "Sandwiches",
+        popular: false,
+        available: true,
+        badge: ""
+      },
+      {
+        name: "Cheese Chutney Sandwich",
+        description: "Tangy chutney and melted cheese grilled to golden perfection.",
+        price: "₹60",
+        image: "",
+        category: "Sandwiches",
+        popular: false,
+        available: true,
+        badge: ""
+      },
+      {
+        name: "Aloo Cheese Sandwich",
+        description: "Spiced aloo filling with melted cheese — a crowd favourite.",
+        price: "₹70",
         image: "",
         category: "Sandwiches",
         popular: true,
@@ -1022,49 +1016,79 @@
         badge: "Must Try"
       },
       {
-        name: "Veg Pizza",
-        description: "Crispy base with tangy sauce, veggies, and loads of cheese.",
+        name: "Jumbo Sandwich",
+        description: "A loaded triple-decker sandwich with veggies, cheese, and sauces.",
         price: "₹120",
         image: "",
-        category: "Pizza",
+        category: "Sandwiches",
+        popular: true,
+        available: true,
+        badge: "Best Seller"
+      },
+      {
+        name: "Fruit Jam Sandwich",
+        description: "Sweet fruit jam grilled between soft bread — perfect for kids.",
+        price: "₹60",
+        image: "",
+        category: "Sandwiches",
         popular: false,
         available: true,
         badge: ""
       },
       {
-        name: "Paneer Burger",
-        description: "Juicy paneer patty with fresh veggies and creamy mayo.",
-        price: "₹100",
+        name: "Pasta Sandwich",
+        description: "Creamy pasta stuffing grilled inside crispy bread.",
+        price: "₹70",
         image: "",
-        category: "Burgers",
+        category: "Sandwiches",
+        popular: false,
+        available: true,
+        badge: ""
+      },
+      {
+        name: "Pasta Cheese Sandwich",
+        description: "Creamy pasta with extra cheese — rich, filling, and delicious.",
+        price: "₹90",
+        image: "",
+        category: "Sandwiches",
         popular: true,
         available: true,
         badge: "Popular"
       },
       {
-        name: "Schezwan Noodles",
-        description: "Spicy schezwan noodles with crunchy veggies.",
+        name: "Chowmein Cheese Sandwich",
+        description: "Crispy noodles with melted cheese and veggies grilled inside bread.",
         price: "₹90",
         image: "",
-        category: "More",
-        popular: false,
-        available: true,
-        badge: "New"
-      },
-      {
-        name: "Masala Dosa",
-        description: "Crispy dosa stuffed with spiced potato filling.",
-        price: "₹110",
-        image: "",
-        category: "More",
+        category: "Sandwiches",
         popular: false,
         available: true,
         badge: ""
       },
       {
-        name: "Chocolate Sandwich",
-        description: "Sweet chocolate spread grilled between soft bread slices.",
+        name: "Vegetable Sandwich",
+        description: "Fresh veggies with chutney and butter — light and healthy.",
         price: "₹70",
+        image: "",
+        category: "Sandwiches",
+        popular: false,
+        available: true,
+        badge: ""
+      },
+      {
+        name: "Vegetable Cheese Sandwich",
+        description: "Fresh veggies with melted cheese — the perfect combo.",
+        price: "₹90",
+        image: "",
+        category: "Sandwiches",
+        popular: false,
+        available: true,
+        badge: ""
+      },
+      {
+        name: "Bombay Sandwich",
+        description: "Classic Bombay-style sandwich with beetroot, potato, and chutney.",
+        price: "₹50",
         image: "",
         category: "Sandwiches",
         popular: false,
@@ -1082,9 +1106,6 @@
       { icon: "❤️", title: "Made for Food Lovers", description: "Crafted with passion for true foodies." }
     ];
 
-    // ==========================================
-    // UTILITY FUNCTIONS
-    // ==========================================
     function isEmpty(value) {
       if (value === null || value === undefined) return true;
       if (typeof value === 'string') return value.trim() === '';
@@ -1103,6 +1124,7 @@
     function getEmojiForCategory(category) {
       const map = {
         "Vada Pav": "🍔",
+        "Dabeli": "🥙",
         "Sandwiches": "🥪",
         "Pizza": "🍕",
         "Burgers": "🍔",
@@ -1111,84 +1133,82 @@
       return map[category] || "🍽️";
     }
 
-    // ==========================================
-    // RENDER FUNCTIONS
-    // ==========================================
     function renderNavbar() {
       document.getElementById('navShopName').textContent = businessConfig.shopName;
     }
 
     function renderHero() {
       document.getElementById('heroHeadline').innerHTML = 
-        `Hot. Fresh. <span>${businessConfig.tagline.replace(/^Hot, Fresh & /, '') || 'Full of Flavour.'}</span>`;
+        'Hot. Fresh. <span>' + (businessConfig.tagline.replace(/^Hot, Fresh & /, '') || 'Full of Flavour.') + '</span>';
       document.getElementById('heroDescription').textContent = 
-        `Delicious, freshly prepared street food served hot at ${businessConfig.address.split(',')[0]}, ${businessConfig.address.split(',')[1]}. From crispy Vada Pav to cheesy Pizza — your local stop for bold Indian flavours.`;
+        'Delicious, freshly prepared street food served hot at ' + businessConfig.address.split(',')[0] + ', ' + businessConfig.address.split(',')[1] + '. From crispy Vada Pav to cheesy Sandwiches — your local stop for bold Indian flavours.';
       document.getElementById('findUsBtn').href = businessConfig.googleMapsUrl;
     }
 
     function renderPopularItems() {
       const popular = menuData.filter(item => item.popular);
       const grid = document.getElementById('popularGrid');
-      
+
       if (popular.length === 0) {
         grid.innerHTML = '<p style="text-align:center;color:var(--text-light);grid-column:1/-1;">Popular items coming soon!</p>';
         return;
       }
 
-      grid.innerHTML = popular.map(item => `
-        <div class="food-card animate-in">
-          <div class="food-card-image">
-            ${item.image ? `<img src="${item.image}" alt="${item.name}" loading="lazy">` : getEmojiForCategory(item.category)}
-            ${item.badge ? `<span class="food-badge badge-${item.badge.toLowerCase().replace(' ', '')}">${item.badge}</span>` : ''}
-          </div>
-          <div class="food-card-content">
-            <h3>${item.name}</h3>
-            <p>${item.description}</p>
-            <div class="food-card-footer">
-              <span class="price">${item.price}</span>
-              <span class="availability ${item.available ? 'available' : 'unavailable'}">
-                ${item.available ? '✓ Available' : '✗ Unavailable'}
-              </span>
-            </div>
-          </div>
-        </div>
-      `).join('');
+      grid.innerHTML = popular.map(item => {
+        const badgeClass = item.badge ? 'badge-' + item.badge.toLowerCase().replace(/\s/g, '') : '';
+        return '<div class="food-card animate-in">' +
+          '<div class="food-card-image">' +
+            (item.image ? '<img src="' + item.image + '" alt="' + item.name + '" loading="lazy">' : getEmojiForCategory(item.category)) +
+            (item.badge ? '<span class="food-badge ' + badgeClass + '">' + item.badge + '</span>' : '') +
+          '</div>' +
+          '<div class="food-card-content">' +
+            '<h3>' + item.name + '</h3>' +
+            '<p>' + item.description + '</p>' +
+            '<div class="food-card-footer">' +
+              '<span class="price">' + item.price + '</span>' +
+              '<span class="availability ' + (item.available ? 'available' : 'unavailable') + '">' +
+                (item.available ? '✓ Available' : '✗ Unavailable') +
+              '</span>' +
+            '</div>' +
+          '</div>' +
+        '</div>';
+      }).join('');
     }
 
     function renderCategoryFilter() {
       const container = document.getElementById('categoryFilter');
-      const categories = ['All', ...businessConfig.menuCategories];
-      
-      container.innerHTML = categories.map(cat => `
-        <button class="category-btn ${cat === 'All' ? 'active' : ''}" 
-                onclick="filterMenu('${cat}')" 
-                data-category="${cat}">
-          ${cat}
-        </button>
-      `).join('');
+      const categoriesWithItems = [...new Set(menuData.map(item => item.category))];
+      const categories = ['All', ...categoriesWithItems];
+
+      container.innerHTML = categories.map(cat => 
+        '<button class="category-btn ' + (cat === 'All' ? 'active' : '') + '" ' +
+        'onclick="filterMenu(' + "'" + cat + "'" + ')" ' +
+        'data-category="' + cat + '">' + cat + '</button>'
+      ).join('');
     }
 
-    function renderMenu(category = 'All') {
+    function renderMenu(category) {
+      category = category || 'All';
       const grid = document.getElementById('menuGrid');
       const items = category === 'All' ? menuData : menuData.filter(item => item.category === category);
-      
+
       if (items.length === 0) {
         grid.innerHTML = '<p style="text-align:center;color:var(--text-light);grid-column:1/-1;">No items in this category yet.</p>';
         return;
       }
 
-      grid.innerHTML = items.map(item => `
-        <div class="menu-item animate-in">
-          <div class="menu-item-image">
-            ${item.image ? `<img src="${item.image}" alt="${item.name}" loading="lazy">` : getEmojiForCategory(item.category)}
-          </div>
-          <div class="menu-item-info">
-            <h4>${item.name}</h4>
-            <p>${item.description}</p>
-            <span class="menu-item-price">${item.price}</span>
-          </div>
-        </div>
-      `).join('');
+      grid.innerHTML = items.map(item => 
+        '<div class="menu-item animate-in">' +
+          '<div class="menu-item-image">' +
+            (item.image ? '<img src="' + item.image + '" alt="' + item.name + '" loading="lazy">' : getEmojiForCategory(item.category)) +
+          '</div>' +
+          '<div class="menu-item-info">' +
+            '<h4>' + item.name + '</h4>' +
+            '<p>' + item.description + '</p>' +
+            '<span class="menu-item-price">' + item.price + '</span>' +
+          '</div>' +
+        '</div>'
+      ).join('');
     }
 
     function filterMenu(category) {
@@ -1196,23 +1216,22 @@
         btn.classList.toggle('active', btn.dataset.category === category);
       });
       renderMenu(category);
-      // Re-trigger animations for new items
       setTimeout(initScrollAnimations, 50);
     }
 
     function renderWhyChooseUs() {
       const grid = document.getElementById('featuresGrid');
-      grid.innerHTML = features.map(f => `
-        <div class="feature-card animate-in">
-          <div class="feature-icon">${f.icon}</div>
-          <h3>${f.title}</h3>
-          <p>${f.description}</p>
-        </div>
-      `).join('');
+      grid.innerHTML = features.map(f => 
+        '<div class="feature-card animate-in">' +
+          '<div class="feature-icon">' + f.icon + '</div>' +
+          '<h3>' + f.title + '</h3>' +
+          '<p>' + f.description + '</p>' +
+        '</div>'
+      ).join('');
     }
 
     function renderAbout() {
-      document.getElementById('aboutTitle').textContent = `About ${businessConfig.shopName}`;
+      document.getElementById('aboutTitle').textContent = 'About ' + businessConfig.shopName;
     }
 
     function renderLocation() {
@@ -1227,33 +1246,43 @@
 
       if (!isEmpty(businessConfig.phone)) {
         cards.push({
-          icon: "📞", title: "Phone", content: `<a href="tel:${businessConfig.phone}">${businessConfig.phone}</a>`
+          icon: "📞", title: "Phone", content: '<a href="tel:+91' + businessConfig.phone + '">+91 ' + businessConfig.phone + '</a>'
+        });
+      }
+
+      if (!isEmpty(businessConfig.phoneSecondary)) {
+        cards.push({
+          icon: "📞", title: "Phone 2", content: '<a href="tel:+91' + businessConfig.phoneSecondary + '">+91 ' + businessConfig.phoneSecondary + '</a>'
         });
       }
 
       if (!isEmpty(businessConfig.whatsappNumber)) {
         cards.push({
-          icon: "💬", title: "WhatsApp", content: `<a href="https://wa.me/${businessConfig.whatsappNumber}" target="_blank">Chat on WhatsApp</a>`
+          icon: "💬", title: "WhatsApp", content: '<a href="https://wa.me/' + businessConfig.whatsappNumber + '" target="_blank">Chat on WhatsApp</a>'
         });
       }
 
       if (hasAnyOpeningHours()) {
         const hoursHtml = Object.entries(businessConfig.openingHours)
-          .filter(([_, val]) => !isEmpty(val))
-          .map(([day, hours]) => `<div style="margin-bottom:4px;"><strong>${day.charAt(0).toUpperCase() + day.slice(1)}:</strong> ${hours}</div>`)
+          .filter(function(entry) { return !isEmpty(entry[1]); })
+          .map(function(entry) {
+            const day = entry[0];
+            const hours = entry[1];
+            return '<div style="margin-bottom:4px;"><strong>' + day.charAt(0).toUpperCase() + day.slice(1) + ':</strong> ' + hours + '</div>';
+          })
           .join('');
         cards.push({ icon: "🕐", title: "Opening Hours", content: hoursHtml });
       }
 
       if (!isEmpty(businessConfig.socialLinks.instagram)) {
         cards.push({
-          icon: "📸", title: "Instagram", content: `<a href="${businessConfig.socialLinks.instagram}" target="_blank">Follow Us</a>`
+          icon: "📸", title: "Instagram", content: '<a href="' + businessConfig.socialLinks.instagram + '" target="_blank">Follow Us</a>'
         });
       }
 
       if (!isEmpty(businessConfig.socialLinks.facebook)) {
         cards.push({
-          icon: "👍", title: "Facebook", content: `<a href="${businessConfig.socialLinks.facebook}" target="_blank">Follow Us</a>`
+          icon: "👍", title: "Facebook", content: '<a href="' + businessConfig.socialLinks.facebook + '" target="_blank">Follow Us</a>'
         });
       }
 
@@ -1262,13 +1291,13 @@
         return;
       }
 
-      grid.innerHTML = cards.map(card => `
-        <div class="contact-card animate-in">
-          <div class="contact-icon">${card.icon}</div>
-          <h3>${card.title}</h3>
-          <div>${card.content}</div>
-        </div>
-      `).join('');
+      grid.innerHTML = cards.map(card => 
+        '<div class="contact-card animate-in">' +
+          '<div class="contact-icon">' + card.icon + '</div>' +
+          '<h3>' + card.title + '</h3>' +
+          '<div>' + card.content + '</div>' +
+        '</div>'
+      ).join('');
     }
 
     function renderFooter() {
@@ -1277,11 +1306,12 @@
       document.getElementById('footerAddress').textContent = businessConfig.address;
       document.getElementById('footerAddress').href = businessConfig.googleMapsUrl;
       document.getElementById('footerDirections').href = businessConfig.googleMapsUrl;
-      document.getElementById('footerCopyright').textContent = `© ${new Date().getFullYear()} ${businessConfig.shopName}. All rights reserved.`;
+      document.getElementById('footerCopyright').textContent = '© ' + new Date().getFullYear() + ' ' + businessConfig.shopName + '. All rights reserved.';
 
       const menuList = document.getElementById('footerMenu');
-      menuList.innerHTML = businessConfig.menuCategories.map(cat => 
-        `<li><a href="#menu" onclick="filterMenu('${cat}')">${cat}</a></li>`
+      const categoriesWithItems = [...new Set(menuData.map(item => item.category))];
+      menuList.innerHTML = categoriesWithItems.map(cat => 
+        '<li><a href="#menu" onclick="filterMenu(' + "'" + cat + "'" + ')">' + cat + '</a></li>'
       ).join('');
 
       const socialContainer = document.getElementById('footerSocial');
@@ -1292,23 +1322,20 @@
       if (!isEmpty(businessConfig.socialLinks.facebook)) {
         socials.push({ href: businessConfig.socialLinks.facebook, icon: "👍", label: "Facebook" });
       }
-      
+
       if (socials.length > 0) {
         socialContainer.innerHTML = socials.map(s => 
-          `<a href="${s.href}" target="_blank" aria-label="${s.label}">${s.icon}</a>`
+          '<a href="' + s.href + '" target="_blank" aria-label="' + s.label + '">' + s.icon + '</a>'
         ).join('');
       } else {
         socialContainer.style.display = 'none';
       }
     }
 
-    // ==========================================
-    // INTERACTIONS
-    // ==========================================
     const hamburger = document.getElementById('hamburger');
     const mobileNav = document.getElementById('mobileNav');
 
-    hamburger.addEventListener('click', () => {
+    hamburger.addEventListener('click', function() {
       hamburger.classList.toggle('active');
       mobileNav.classList.toggle('active');
       document.body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : '';
@@ -1320,27 +1347,24 @@
       document.body.style.overflow = '';
     }
 
-    // Sticky navbar shadow
-    window.addEventListener('scroll', () => {
+    window.addEventListener('scroll', function() {
       const navbar = document.getElementById('navbar');
       navbar.classList.toggle('scrolled', window.scrollY > 10);
     });
 
-    // Scroll animations
     function initScrollAnimations() {
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
+      const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
           if (entry.isIntersecting) {
             entry.target.classList.add('visible');
           }
         });
       }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
-      document.querySelectorAll('.animate-in').forEach(el => observer.observe(el));
+      document.querySelectorAll('.animate-in').forEach(function(el) { observer.observe(el); });
     }
 
-    // Smooth scroll for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
       anchor.addEventListener('click', function(e) {
         const href = this.getAttribute('href');
         if (href !== '#') {
@@ -1353,9 +1377,6 @@
       });
     });
 
-    // ==========================================
-    // INITIALIZATION
-    // ==========================================
     function init() {
       renderNavbar();
       renderHero();
@@ -1368,9 +1389,7 @@
       renderContact();
       renderFooter();
       initScrollAnimations();
-
-      // Update page title from config
-      document.title = `${businessConfig.shopName} | Street Food in Neemuch`;
+      document.title = businessConfig.shopName + ' | Street Food in Neemuch';
     }
 
     init();
