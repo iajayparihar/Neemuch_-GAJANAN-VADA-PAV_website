@@ -23,29 +23,18 @@
 </head>
 <body>
   <nav class="nav"><div class="nav-inner"><a href="#home" class="logo"><span class="logo-icon">🍔</span>GAJANAN VADA PAV</a><div class="links"><a href="#home">Home</a><a href="#menu">Menu</a><a href="#about">About</a><a href="#location">Location</a><a href="#contact">Contact</a><a class="btn primary" href="#menu">View Menu</a></div><button class="menu-btn" id="menuBtn">☰</button></div></nav>
-
   <main>
     <section class="hero" id="home"><div class="hero-grid"><div><span class="eyebrow">🔥 Fresh from the pan</span><h1>Hot. Fresh. <span>Full of Flavour.</span></h1><p>Delicious, freshly prepared street food served hot at Lions Park, Neemuch. From crispy Vada Pav to cheesy Sandwiches — your local stop for bold Indian flavours.</p><div class="actions"><a class="btn primary" href="#menu">View Menu</a><a class="btn secondary" href="https://maps.app.goo.gl/66VZw2Hnrnd38LcD8" target="_blank">📍 Find Us</a></div></div><div class="hero-photo"><img src="images/Delicious%20Vada%20pav.jpeg" alt="Fresh Vada Pav at GAJANAN VADA PAV"><span class="price">Vada Pav from ₹30</span></div></div></section>
-
     <section><div class="container"><div class="heading"><h2>Customer Favourites</h2><p>Our most loved items — made fresh and served hot.</p></div><div class="cards" id="popularGrid"></div></div></section>
-
     <section class="menu" id="menu"><div class="container"><div class="heading"><h2>Our Menu</h2><p>Explore our full range of Vada Pav, Dabeli and Sandwiches.</p></div><div class="filters" id="filters"></div><div class="menu-grid" id="menuGrid"></div></div></section>
-
     <section class="about" id="about"><div class="container about-grid"><div class="about-photo"><img src="images/Dabeli%20_%20J%20Cooking%20Odyssey.jpeg" alt="Fresh Dabeli at GAJANAN VADA PAV" loading="lazy"></div><div><h2>About GAJANAN VADA PAV</h2><p>Your local stop for delicious, freshly prepared street food in Neemuch. We believe great food does not need a fancy address — just fresh ingredients, bold spices, and a lot of love.</p><p>Every Vada Pav, Dabeli and Sandwich is made to order, served hot and priced right.</p><a class="btn primary" href="#menu">Explore Menu</a></div></div></section>
-
     <section><div class="container"><div class="heading"><h2>Why Choose Us?</h2><p>Big taste, fresh ingredients and the street-food experience you love.</p></div><div class="features"><div class="feature"><div class="feature-icon">🔥</div><h3>Freshly Prepared</h3><p>Every item is made to order with fresh ingredients.</p></div><div class="feature"><div class="feature-icon">😋</div><h3>Hot & Delicious</h3><p>Served straight from the pan to your hands.</p></div><div class="feature"><div class="feature-icon">🇮🇳</div><h3>Authentic Street Food</h3><p>Real Indian flavours with local Neemuch style.</p></div><div class="feature"><div class="feature-icon">⚡</div><h3>Quick Service</h3><p>Grab your favourites without a long wait.</p></div><div class="feature"><div class="feature-icon">💰</div><h3>Great Value</h3><p>Big taste at pocket-friendly street-food prices.</p></div><div class="feature"><div class="feature-icon">❤️</div><h3>Made with Love</h3><p>Crafted with passion for true food lovers.</p></div></div></div></section>
-
     <section class="location" id="location"><div class="container location-grid"><div><h2>Visit Us 📍</h2><p><strong>Lions Park, Neemuch, Madhya Pradesh, India</strong></p><p>Find us at Lions Park — easy to spot, hard to resist. Come by for a quick bite or grab your favourites to go.</p><a class="btn primary" href="https://maps.app.goo.gl/66VZw2Hnrnd38LcD8" target="_blank">Get Directions</a></div><div class="map"><div><div class="map-icon">🗺️</div><strong>Lions Park, Neemuch</strong><br><a href="https://maps.app.goo.gl/66VZw2Hnrnd38LcD8" target="_blank" style="color:var(--primary);font-weight:800">Open in Google Maps →</a></div></div></div></section>
-
     <section class="contact" id="contact"><div class="container"><div class="heading"><h2>Contact & Hours</h2><p>Reach out or visit us at Lions Park.</p></div><div class="contact-grid"><div class="contact-card"><div class="icon">📞</div><h3>Phone</h3><a href="tel:+918815511700">+91 88155 11700</a></div><div class="contact-card"><div class="icon">📞</div><h3>Phone 2</h3><a href="tel:+919981706138">+91 99817 06138</a></div><div class="contact-card"><div class="icon">💬</div><h3>WhatsApp</h3><a href="https://wa.me/919981706138" target="_blank">Chat on WhatsApp</a></div></div></div></section>
   </main>
-
   <footer><div class="footer-grid"><div><div class="logo" style="color:#fff;margin-bottom:12px"><span class="logo-icon">🍔</span>GAJANAN VADA PAV</div><p>Hot, fresh & full of flavour. Your local street-food destination in Neemuch.</p></div><div><h4>Quick Links</h4><ul><li><a href="#home">Home</a></li><li><a href="#menu">Menu</a></li><li><a href="#about">About</a></li><li><a href="#location">Location</a></li></ul></div><div><h4>Visit</h4><ul><li><a href="https://maps.app.goo.gl/66VZw2Hnrnd38LcD8" target="_blank">Lions Park, Neemuch</a></li><li><a href="tel:+918815511700">+91 88155 11700</a></li><li><a href="https://wa.me/919981706138" target="_blank">WhatsApp</a></li></ul></div></div><div class="bottom">© <span id="year"></span> GAJANAN VADA PAV. All rights reserved.</div></footer>
-
   <script>
-    // URL-encode filenames so spaces, #, &, unicode characters work on GitHub Pages/Vercel.
     const image = name => 'images/' + encodeURIComponent(name);
-
     const menuData = [
       {name:'Vada Pav',description:'Classic Mumbai-style vada pav with green chutney and fried green chilli.',price:'₹30',image:'Delicious Vada pav.jpeg',category:'Vada Pav',popular:true,badge:'Popular'},
       {name:'Cheese Vada Pav',description:'Classic vada pav loaded with melted cheese and special masala.',price:'₹40',image:'chees vda pav.jpeg',category:'Vada Pav',popular:true,badge:'Best Seller'},
@@ -55,7 +44,7 @@
       {name:'Schezwan Dabeli',description:'Spicy Schezwan dabeli with fiery sauce, peanuts and sev.',price:'₹40',image:'Shezwan  Dabeli.jpeg',category:'Dabeli',popular:false,badge:''},
       {name:'Aloo Sandwich',description:'Spiced potato filling grilled between fresh bread slices.',price:'₹50',image:'Spicy Aloo Sandwich – Quick Potato & Cheese Breakfast.jpeg',category:'Sandwiches',popular:false,badge:''},
       {name:'Cheese Chutney Sandwich',description:'Tangy chutney and melted cheese grilled to golden perfection.',price:'₹60',image:'chees chatni sandwitch.jpeg',category:'Sandwiches',popular:false,badge:''},
-      {name:'Aloo Cheese Sandwich',description:'Spiced aloo filling with melted cheese — a crowd favourite.',price:'₹70',image:'Aloo Cheese Sandwich _ Potato Sandwich _ Sandwich recipe #sandwich #shortvideo #youtubeshorts.jpeg',category:'Sandwiches',popular:true,badge:'Must Try'},
+      {name:'Aloo Cheese Sandwich',description:'Spiced aloo filling with melted cheese — a crowd favourite.',price:'₹70',image:'aalu_cheese_sandwitch.jpeg',category:'Sandwiches',popular:true,badge:'Must Try'},
       {name:'Jumbo Sandwich',description:'A loaded triple-decker sandwich with veggies, cheese and sauces.',price:'₹120',image:'Paneer Jumbo Sandwich.jpeg',category:'Sandwiches',popular:true,badge:'Best Seller'},
       {name:'Fruit Jam Sandwich',description:'Sweet fruit jam grilled between soft bread — perfect for kids.',price:'₹60',image:'The Right Way To Make A Peanut Butter & Jelly Sandwich - And The Wrong Way!.jpeg',category:'Sandwiches',popular:false,badge:''},
       {name:'Pasta Sandwich',description:'Creamy pasta stuffing grilled inside crispy bread.',price:'₹70',image:'pasta sandwich.jpeg',category:'Sandwiches',popular:false,badge:''},
@@ -65,26 +54,11 @@
       {name:'Vegetable Cheese Sandwich',description:'Fresh vegetables with melted cheese — the perfect combo.',price:'₹90',image:'Spicy Aloo Sandwich – Quick Potato & Cheese Breakfast.jpeg',category:'Sandwiches',popular:false,badge:''},
       {name:'Bombay Sandwich',description:'Classic Bombay-style sandwich with potato, vegetables and chutney.',price:'₹50',image:'boombe sandwich.jpeg',category:'Sandwiches',popular:false,badge:''}
     ];
-
     const categories=['All',...new Set(menuData.map(x=>x.category))];
-
-    function renderPopular(){
-      document.getElementById('popularGrid').innerHTML=menuData.filter(x=>x.popular).map(x=>`<article class="card"><div class="card-img"><img src="${image(x.image)}" alt="${x.name}" loading="lazy">${x.badge?`<span class="badge">${x.badge}</span>`:''}</div><div class="card-body"><h3>${x.name}</h3><p>${x.description}</p><div class="card-foot"><span class="cost">${x.price}</span><span class="available">✓ Available</span></div></div></article>`).join('');
-    }
-
-    function renderFilters(active='All'){
-      document.getElementById('filters').innerHTML=categories.map(c=>`<button class="filter ${c===active?'active':''}" data-category="${c}">${c}</button>`).join('');
-      document.querySelectorAll('.filter').forEach(btn=>btn.addEventListener('click',()=>{renderFilters(btn.dataset.category);renderMenu(btn.dataset.category)}));
-    }
-
-    function renderMenu(category='All'){
-      const items=category==='All'?menuData:menuData.filter(x=>x.category===category);
-      document.getElementById('menuGrid').innerHTML=items.map(x=>`<article class="item"><div class="item-img"><img src="${image(x.image)}" alt="${x.name}" loading="lazy"></div><div><h3>${x.name}</h3><p>${x.description}</p><strong>${x.price}</strong></div></article>`).join('');
-    }
-
-    document.getElementById('menuBtn').addEventListener('click',()=>document.querySelector('.links').style.display=document.querySelector('.links').style.display==='flex'?'none':'flex');
-    document.getElementById('year').textContent=new Date().getFullYear();
-    renderPopular();renderFilters();renderMenu();
+    function renderPopular(){document.getElementById('popularGrid').innerHTML=menuData.filter(x=>x.popular).map(x=>`<article class="card"><div class="card-img"><img src="${image(x.image)}" alt="${x.name}" loading="lazy">${x.badge?`<span class="badge">${x.badge}</span>`:''}</div><div class="card-body"><h3>${x.name}</h3><p>${x.description}</p><div class="card-foot"><span class="cost">${x.price}</span><span class="available">✓ Available</span></div></div></article>`).join('')}
+    function renderFilters(active='All'){document.getElementById('filters').innerHTML=categories.map(c=>`<button class="filter ${c===active?'active':''}" data-category="${c}">${c}</button>`).join('');document.querySelectorAll('.filter').forEach(btn=>btn.addEventListener('click',()=>{renderFilters(btn.dataset.category);renderMenu(btn.dataset.category)}))}
+    function renderMenu(category='All'){const items=category==='All'?menuData:menuData.filter(x=>x.category===category);document.getElementById('menuGrid').innerHTML=items.map(x=>`<article class="item"><div class="item-img"><img src="${image(x.image)}" alt="${x.name}" loading="lazy"></div><div><h3>${x.name}</h3><p>${x.description}</p><strong>${x.price}</strong></div></article>`).join('')}
+    document.getElementById('menuBtn').addEventListener('click',()=>document.querySelector('.links').style.display=document.querySelector('.links').style.display==='flex'?'none':'flex');document.getElementById('year').textContent=new Date().getFullYear();renderPopular();renderFilters();renderMenu();
   </script>
 </body>
 </html>
